@@ -1,0 +1,65 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: f4aa7c499285abd21e907a9ead8f0d8b9d83143afb012f581775760e20c06da5
+
+name:           chap08
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/chap08#readme>
+homepage:       https://github.com/githubuser/chap08#readme
+bug-reports:    https://github.com/githubuser/chap08/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/chap08
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_chap08
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , stm
+  default-language: Haskell2010
+
+executable chap08-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_chap08
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , chap08
+    , stm
+  default-language: Haskell2010
+
+test-suite chap08-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_chap08
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , chap08
+    , stm
+  default-language: Haskell2010
